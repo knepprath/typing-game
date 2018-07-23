@@ -1,4 +1,4 @@
-Typing game for toddlers to learn letters
+Toddler Proof Typing Game.
 
 Requirements
 - Python3
@@ -10,9 +10,9 @@ Trying typing `t`, `o`, or `b`. Press `esc` to exit.
 
 # Origin Story
 
-One of my daughters first 10 words was "type", because she would watch us work on the laptop.
+One of my daughters first 10 words was "type" because she wanted to mimic us working on the laptop.  
 
-When she was around 1 we gave her and old bluetooth keyboard to mash on. She proceeded to hack the iPad to play her favorite Mother Goose Club songs. It wasn't long before she began insisting on the real thing.
+When she was around 1 we gave her an old bluetooth keyboard to mash on. She proceeded to hack the iPad (which is wasn't paired with 🤷‍♂️) to play her favorite Mother Goose Club songs. It wasn't long before she began insisting on the real thing.
 
 Occasionally we would appease her by doing Google image searches for her favorite things; trains, buses, cats. 
 
