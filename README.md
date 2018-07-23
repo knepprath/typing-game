@@ -1,4 +1,4 @@
-Toddler Proof Typing Game.
+# Toddler Proof Typing Game
 
 Requirements
 - Python3
