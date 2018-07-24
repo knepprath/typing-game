@@ -6,4 +6,4 @@ Requirements
 
 `python ./typing_game.py`
 
-Trying typing `t`, `o`, or `b`. Press `esc` to exit.
+Trying typing `t`, `o`, or `b`. To quit, Press `esc` 4 times consecutively.

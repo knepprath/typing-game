@@ -10,14 +10,14 @@ import os
 WIDTH=1366
 HEIGHT=768
 
+# Consective Magic Keystroke Count to Quit
+QUIT=4
+
 class MainWindow():
     
     def __init__(self, main):
-
-        # button to quit
-        self.quitButton = Button(main, text="QUIT", command=self.quit)
-        self.quitButton.grid(row=0, column=0, sticky="w")
-
+        self.quit_counter = 1
+        
         # canvas for image
         self.canvas = Canvas(main, width=WIDTH, height=HEIGHT, highlightthickness=0, bg="black")
         self.canvas.grid(row=1, column=0)
@@ -44,11 +44,16 @@ class MainWindow():
         root.bind("<Key>", self.onKey)
         root.bind("<Escape>", self.quit)
 
-
     def quit(self, event=None):
-            root.destroy()
+            if self.quit_counter == QUIT:
+                root.destroy()
+            else:
+                self.quit_counter += 1
 
     def onKey(self, event=None):
+        # reset quit_counter so that accidental esc clicks don't accrue
+        self.quit_counter = 1 
+        
         # TODO handle suppored characters generically
         if event.char == "b" or event.char == "o" or event.char == "t":
             # next image
@@ -61,7 +66,6 @@ class MainWindow():
 
             # change image
             self.canvas.itemconfig(self.image_on_canvas, image = self.my_images_dict[event.char][self.my_image_number])
-
 
 
 root = Tk()
