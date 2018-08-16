@@ -54,8 +54,7 @@ class MainWindow():
         # reset quit_counter so that accidental esc clicks don't accrue
         self.quit_counter = 1 
         
-        # TODO handle suppored characters generically
-        if event.char == "b" or event.char == "o" or event.char == "t":
+        if event.char in self.my_images_dict:
             # next image
             # BUG when changing between letters if my_image_number from previous letter is greater than what new letter contains
             self.my_image_number += 1
