@@ -56,11 +56,10 @@ class MainWindow():
         
         if event.char in self.my_images_dict:
             # next image
-            # BUG when changing between letters if my_image_number from previous letter is greater than what new letter contains
             self.my_image_number += 1
 
-            # return to first image
-            if self.my_image_number == len(self.my_images_dict[event.char]):
+            # return to first image if counter has reached end
+            if self.my_image_number >= len(self.my_images_dict[event.char]):
                 self.my_image_number = 0
 
             # change image
